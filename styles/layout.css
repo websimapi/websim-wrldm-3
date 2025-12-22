@@ -1,0 +1,39 @@
+.page-container { 
+    position: relative; 
+    flex-grow: 1; 
+    min-width: 0; 
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1 1 auto; 
+    min-width: 0; 
+    padding: 24px;
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+}
+
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+.content-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+#loader {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #6b7280;
+    display: none; 
+}

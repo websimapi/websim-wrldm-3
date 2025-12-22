@@ -1,0 +1,14 @@
+@import './styles/reset.css';
+@import './styles/layout.css';
+@import './styles/header.css';
+@import './styles/logo.css';
+@import './styles/project-cards.css';
+@import './styles/sidebar.css';
+@import './styles/sidebar-header.css';
+@import './styles/sidebar-stats.css';
+@import './styles/sidebar-history.css';
+@import './styles/sidebar-projects.css';
+@import './styles/sidebar-footer.css';
+@import './styles/menus.css';
+@import './styles/responsive.css';
+

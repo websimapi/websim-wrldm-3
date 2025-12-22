@@ -1,0 +1,74 @@
+.sidebar {
+    background: white;
+    border-left: 1px solid #e1e5e9;
+    height: 100vh; /* Full viewport height */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    width: var(--sidebar-width);
+    flex-shrink: 0; /* Prevent sidebar from shrinking if page content is too wide */
+}
+
+.sidebar.hidden {
+    display: none;
+}
+
+.sidebar:not(.hidden) { /* When sidebar is open (hidden class is NOT present) */
+    display: flex; /* Ensure it is visible */
+}
+
+.sidebar-top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 8px;
+    border-bottom: 1px solid #e1e5e9;
+    height: var(--header-height); /* Match main header height */
+    flex-shrink: 0;
+}
+
+.sidebar-nav-controls-left,
+.sidebar-nav-controls-right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sidebar-top-nav .logo {
+    flex-grow: 0;
+    text-align: left;
+}
+
+.nav-btn.sidebar-action-btn.active {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+.nav-btn.sidebar-action-btn.active:hover {
+    background-color: #e5e7eb;
+}
+
+.sidebar-content {
+    padding: 12px; 
+    flex-grow: 1;
+    overflow-y: auto; /* Already here, good for internal scroll */
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    /* Hide scrollbar for IE/Edge */
+    -ms-overflow-style: none;
+}
+/* Hide scrollbar for WebKit browsers */
+.sidebar-content::-webkit-scrollbar {
+    display: none;
+}
+
+#remix-view {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height));
+}
+
+#projects-view {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height));
+}

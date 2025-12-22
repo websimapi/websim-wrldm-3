@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --header-height: 42px; /* Default for desktop */
+  --sidebar-width: 400px; /* Sidebar width */
+  --sidebar-button-size: 36px; /* approx size of .nav-btn with padding */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    overflow-y: hidden; /* Prevent vertical scroll on body */
+    display: flex; /* ADDED: Make body a flex container */
+    flex-direction: row; /* ADDED: Align children (page-container, sidebar) in a row */
+    height: 100vh;
+}
+
+#app-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}

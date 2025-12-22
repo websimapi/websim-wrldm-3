@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRLDM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="/a/ea71a7bc-eff4-46fd-a578-009698ea2f58" type="image/png">
+</head>
+<body>
+    <div id="app-container">
+        <div class="page-container" id="pageContainer">
+            <header class="header">
+                <div class="nav-controls">
+                    <button class="nav-btn"><i class="fas fa-home"></i></button>
+                    <button class="nav-btn"><i class="far fa-bell"></i></button>
+                    <button class="nav-btn heart-btn"><i class="far fa-heart"></i></button>
+                    <div class="nav-divider"></div>
+                    <button class="nav-btn"><i class="fas fa-plus"></i></button>
+                    <button class="nav-btn refresh-btn"><i class="fas fa-sync-alt"></i></button>
+                </div>
+                
+                <div class="address-bar-container">
+                    <div class="address-bar">
+                        <img src="/a/250c4334-de78-4d0b-8b2b-a7616278f9fe" alt="User Avatar" class="address-bar-avatar" id="userAvatarAddressBar">
+                        <input type="text" placeholder="What would you like to change?" class="url-input">
+                    </div>
+                </div>
+                
+                <div class="header-controls">
+                    <button class="control-btn"><i class="fas fa-external-link-alt"></i></button>
+                    <button class="control-btn diamond-btn">♦</button>
+                    <button class="control-btn"><i class="fas fa-ellipsis-v"></i></button>
+                    <div class="nav-divider"></div>
+                    <div class="logo-sidebar-wrapper" id="mainHeaderLogoWrapper">
+                        <div class="logo" id="mainHeaderLogo">
+                            <span>w</span><span>e</span><span>b</span><span>s</span><span>i</span><span>m</span>
+                        </div>
+                        <button class="sidebar-toggle" id="sidebarToggle">
+                            <!-- Icon is set by JS -->
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <div class="content-grid" id="projects-grid">
+                    <!-- Project cards will be injected here by script.js -->
+                </div>
+                <div id="loader">Loading...</div>
+            </main>
+        </div>
+
+        <div id="sidebar-container"></div>
+
+        <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+        </script>
+        <script type="module" src="script.js"></script>
+    </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

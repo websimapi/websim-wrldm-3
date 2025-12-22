@@ -1,0 +1,320 @@
+/* Model Selector Styles */
+.model-selector-container {
+    position: relative;
+}
+
+#model-selector-menu {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e1e5e9;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    z-index: 1000;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.model-section + .model-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 8px;
+}
+
+.model-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.model-section-header .section-title {
+    font-weight: 500;
+}
+
+.model-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.model-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    gap: 12px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.model-item:hover {
+    background-color: #f3f4f6;
+}
+
+.model-item.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.model-item .model-check {
+    width: 16px;
+    visibility: hidden;
+    color: white;
+}
+
+.model-item.active .model-check {
+    visibility: visible;
+}
+
+.model-name {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.model-name .fa-info-circle {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.model-item.active .model-name .fa-info-circle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.model-tag {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.model-tag.popular {
+    color: #3b82f6;
+}
+
+.model-item.active .model-tag.popular {
+    color: white;
+    opacity: 0.8;
+}
+
+.model-cost {
+    font-size: 13px;
+    color: #6b7280;
+    margin-left: auto;
+}
+
+.model-item.active .model-cost {
+    color: white;
+}
+
+.abilities-container {
+    position: relative;
+}
+
+#advanced-abilities-menu {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: -60px;
+    width: 420px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e1e5e9;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    z-index: 1000;
+    padding: 16px;
+    display: none; /* JS toggles to flex */
+    flex-direction: column;
+    gap: 12px;
+}
+
+#advanced-abilities-menu h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+}
+
+#advanced-abilities-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#advanced-abilities-menu li {
+    display: block;
+}
+
+#advanced-abilities-menu label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+#advanced-abilities-menu label:hover {
+    background-color: #f3f4f6;
+}
+
+#advanced-abilities-menu .ability-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#advanced-abilities-menu .ability-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    line-height: 1.2;
+}
+
+#advanced-abilities-menu .ability-desc {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+#advanced-abilities-menu input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 4px;
+    transform: translateY(1px);
+    flex-shrink: 0;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+#advanced-abilities-menu input[type="checkbox"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+    -webkit-clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+#advanced-abilities-menu input[type="checkbox"]:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+#advanced-abilities-menu input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+#advanced-abilities-menu input[type="checkbox"]:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+.abilities-warning {
+    font-size: 12px;
+    color: #ef4444; /* Tailwind red-500 */
+    margin-top: 12px;
+    padding: 8px;
+    background-color: rgba(239, 68, 68, 0.08);
+    border-radius: 6px;
+    line-height: 1.4;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Visibility Selector Styles */
+.visibility-selector-container {
+    position: relative;
+}
+
+#visibility-selector-menu {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    width: 200px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e1e5e9;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    z-index: 1000;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.visibility-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.visibility-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    gap: 12px;
+    transition: background-color 0.15s ease-in-out;
+    color: #374151;
+}
+
+.visibility-item:not(.active):hover {
+    background-color: #f3f4f6;
+}
+
+.visibility-item.active {
+    color: #111827;
+}
+
+.visibility-item i {
+    width: 20px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.visibility-item.active > i {
+    color: #111827;
+}
+
+.visibility-item .visibility-name {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.visibility-item .visibility-check {
+    width: 16px;
+    visibility: hidden;
+    color: #3b82f6;
+}
+
+.visibility-item.active .visibility-check {
+    visibility: visible;
+}

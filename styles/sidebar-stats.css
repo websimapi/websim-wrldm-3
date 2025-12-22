@@ -1,0 +1,43 @@
+.sidebar-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px 20px 4px;
+    border-bottom: 1px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.stat-item:hover {
+    background-color: #f3f4f6;
+}
+
+.stat-item.active {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 4px; /* Adjust to keep visual alignment */
+    font-weight: 500;
+}
+
+.stat-item.active i {
+    color: #3b82f6;
+}
+
+.stat-value {
+    font-weight: 500;
+}
+
+.stat-item i {
+    font-size: 16px;
+}

@@ -1,0 +1,53 @@
+.logo {
+    padding-bottom: 0.25rem;
+    transform: rotate(-6deg);
+    margin-left: 0.25rem;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive;
+    letter-spacing: 0.2em;
+    text-shadow: 0.04em 0.04em 0.08em rgba(0,0,0,0.5);
+    display: inline-block; 
+}
+
+.logo span {
+    display: inline-block;
+}
+
+.logo span:nth-child(1) {
+    color: #4285f4;
+    transform: rotate(-10deg);
+}
+
+.logo span:nth-child(2) {
+    color: #ea4335;
+    transform: rotate(5deg) translateY(-0.2rem);
+}
+
+.logo span:nth-child(3) {
+    color: #fbbc05;
+    transform: rotate(-5deg) translateY(0.1rem);
+}
+
+.logo span:nth-child(4) {
+    color: #4285f4;
+    transform: rotate(10deg) translateY(-0.2rem);
+}
+
+.logo span:nth-child(5) {
+    color: #34a853;
+    transform: rotate(-10deg) translateY(0.2rem);
+}
+
+.logo span:nth-child(6) {
+    color: #ea4335;
+    transform: rotate(5deg) translateY(-0.2rem);
+}
+
+.logo.hidden { 
+    display: none !important;
+}
+
+.wrldm-logo-header {
+    height: 20px; 
+    display: block; 
+}
